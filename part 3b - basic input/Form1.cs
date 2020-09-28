@@ -10,11 +10,44 @@ using System.Windows.Forms;
 
 namespace part_3b___basic_input
 {
-    public partial class Form1 : Form
+    public partial class frmlife : Form
     {
-        public Form1()
+        public frmlife()
         {
             InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string height = txtboxheight.Text;
+            string name = txtboxname.Text;
+            int ageFinal;
+            ageFinal = Convert.ToInt32(txtboxage.Text);
+            Convert.ToDouble(height);
+
+
+            ageFinal = 82 - ageFinal;
+
+            lblmessage.Text = ($"Greetings {name}, your height is {height}m, your average years of life left is, {ageFinal}");
+
+
+
+
+
+
+
+
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
